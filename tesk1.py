@@ -7,13 +7,13 @@ Output = [] # 최종 출력을 위해 [총점, 평균, 학점] [등수]를 저�
 
 def is_already_StdNum(a, b):
     index = len(a)
-    while True:
-        if index > 1:
-            for i in range(index-1):
-                if b == a[i][0]:
-                    b = input("이미 존재하는 학번입니다. 다시 입력해주세요 : ")
-                    break
-                return b
+    if index >= 1:
+        for i in range(index):
+            if b == (a[i][0]):
+                b = input("이미 존재하는 학번입니다. 다시 입력해주세요 : ")
+                is_already_StdNum(a,b)
+    else: return b
+
 
 
 def is_correct_StdNum(a):
